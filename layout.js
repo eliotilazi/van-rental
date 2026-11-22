@@ -10,8 +10,7 @@ function pickLang() {
     const saved = localStorage.getItem('cl-lang')
     if (LANGS.includes(saved)) return saved
   } catch {}
-  const nav = (navigator.language || 'fr').slice(0, 2)
-  return LANGS.includes(nav) ? nav : 'fr'
+  return 'en' // English by default; French and Albanian stay one click away
 }
 
 export const site = { lang: pickLang() }
