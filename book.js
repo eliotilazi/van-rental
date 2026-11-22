@@ -20,6 +20,17 @@ const state = {
   ref: '',
 }
 
+// Without dates in the link, start on the first open day when the vehicle is free.
+if (!q.get('start')) {
+  const s = new Date(d.start), e = new Date(d.end)
+  for (let i = 0; i < 30 && !isAvailableOn(s, e); i++) {
+    s.setDate(s.getDate() + 1); e.setDate(e.getDate() + 1)
+    if (s.getDay() === 0) { s.setDate(s.getDate() + 1); e.setDate(e.getDate() + 1) }
+  }
+  state.start = toInput(s); state.end = toInput(e)
+}
+function isAvailableOn(s, e) { return bookedDays(state.vehicleId, s, e).length === 0 }
+
 const booking = () => ({ ...state, start: fromInput(state.start), end: fromInput(state.end) })
 
 // All problems on step 1 (dates and availability).
