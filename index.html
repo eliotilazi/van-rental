@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Cargolac | Van rental</title>
+  <meta name="description" content="Cargolac: van rental website (portfolio project by Eliot Ilazi). Fleet, live booking with prices, FR / SQ / EN.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;800&family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header id="site-header"></header>
+  <main>
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <p class="kicker" data-t="home_kicker"></p>
+          <h1 data-t="home_title"></h1>
+          <p class="lead" data-t="home_lead"></p>
+        </div>
+        <form class="card search" id="search">
+          <h2 data-t="search_title"></h2>
+          <div class="form-grid">
+            <label class="f"><span data-t="category"></span><select name="cat" id="s-cat"></select></label>
+            <label class="f"><span data-t="pickup"></span><input type="datetime-local" name="start" id="s-start" step="900"></label>
+            <label class="f"><span data-t="return"></span><input type="datetime-local" name="end" id="s-end" step="900"></label>
+          </div>
+          <p class="err" id="s-err"></p>
+          <button class="btn" type="submit" data-t="search_btn" style="width:100%;margin-top:10px"></button>
+        </form>
+      </div>
+    </section>
+    <section class="wrap">
+      <h2 data-t="why_title"></h2>
+      <div class="why">
+        <div><div class="icon">CHF</div><h3 data-t="why1_t"></h3><p data-t="why1_d"></p></div>
+        <div><div class="icon">km</div><h3 data-t="why2_t"></h3><p data-t="why2_d"></p></div>
+        <div><div class="icon">½</div><h3 data-t="why3_t"></h3><p data-t="why3_d"></p></div>
+        <div><div class="icon">+</div><h3 data-t="why4_t"></h3><p data-t="why4_d"></p></div>
+      </div>
+    </section>
+    <section class="wrap">
+      <h2 data-t="featured_title"></h2>
+      <div class="grid" id="featured"></div>
+    </section>
+    <section class="wrap">
+      <h2 data-t="steps_title"></h2>
+      <ol class="steps">
+        <li><h3 data-t="step1_t"></h3><p data-t="step1_d"></p></li>
+        <li><h3 data-t="step2_t"></h3><p data-t="step2_d"></p></li>
+        <li><h3 data-t="step3_t"></h3><p data-t="step3_d"></p></li>
+      </ol>
+    </section>
+    <section class="wrap">
+      <div class="cta">
+        <div><h2 data-t="cta_title"></h2><p data-t="cta_text"></p></div>
+        <a class="btn" href="reservation.html" data-t="nav_book"></a>
+      </div>
+    </section>
+  </main>
+  <footer id="site-footer"></footer>
+  <script type="module" src="home.js"></script>
+</body>
+</html>

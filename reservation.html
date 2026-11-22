@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Booking | Cargolac</title>
+  <meta name="description" content="Cargolac: van rental website (portfolio project by Eliot Ilazi). Fleet, live booking with prices, FR / SQ / EN.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;800&family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header id="site-header"></header>
+  <main>
+    <div class="wrap page-head">
+      <h1 data-t="book_title"></h1>
+      <p class="lead" data-t="book_lead"></p>
+    </div>
+    <section class="wrap" style="padding-top:20px">
+      <div class="book">
+        <div class="card">
+          <ol class="stepper" id="stepper"></ol>
+          <form id="form" novalidate></form>
+        </div>
+        <aside class="card summary" id="summary" aria-live="polite"></aside>
+      </div>
+    </section>
+  </main>
+  <footer id="site-footer"></footer>
+  <script type="module" src="book.js"></script>
+</body>
+</html>
